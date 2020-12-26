@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Changer Bootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link rel="stylesheet" href="{{url_for('static', filename='slider.css')}}" type="text/css">
+  <!-- Favicons -->
+  <link href="{{url_for('static', filename='img/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static', filename='img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{{url_for('static',filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{{url_for('static',filename = 'lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename = 'lib/animate/animate.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename = 'lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename = 'lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename = 'lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{{url_for('static',filename = 'css/style1.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Rapid
+    Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+
+    <div id="topbar">
+      <div class="container">
+        
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><a href="#intro" class="scrollto"><span>Changer</span></a></h1>
+        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+      </div>
+
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#intro">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#footer">Contact Us</a></li>
+
+          <li><a href="/login">로그인</a></li>
+          <li><a href="/register">회원가입</a></li>
+          
+          
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+          <h2>Changer Application<br>for Your <span>Health!</span></h2>
+          <div>
+            <a href="#services" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 intro-img order-md-last order-first">
+          <img src="static/img/intro-img.svg" alt="" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </section><!-- #intro -->
+
+  <main id="main">
+
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+        <h3>식단 입력 서비스</h3>
+          <p>Changer Application으로부터 사용할 수 있는 서비스입니다. 자신의 식단을 아래 3가지의 방법으로 입력할 수 있습니다.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-paper-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="/foodresearch">검색</a></h4>
+              <p class="description">자신의 식단을 직접 검색해서 입력할 수 있습니다..</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="/favorites">즐겨찾기</a></h4>
+              <p class="description">자주 먹는 식단을 즐겨찾기에 등록하여 빠르게 식단을 등록할 수 있습니다.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-camera-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="/foodocr">스캔</a></h4>
+              <p class="description">영양성분표 사진을 찍어서 간단하게 자신의 식단을 입력할 수 있습니다.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-paper-outline" style="color: hsl(81, 100%, 70%);"></i></div>
+              <h4 class="title"><a href="/recommend">메뉴 추천 </a></h4>
+              <p class="description">부족한 영양을 보충하는 음식을 추천받을 수 있습니다.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #5d06e9;"></i></div>
+              <h4 class="title"><a href="/statistic">영양 통계 </a></h4>
+              <p class="description">자신의 영양 섭취 현황을 확인할 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--==========================
+      Why Us Section
+    ============================-->
+    <section id="why-us" class="wow fadeIn">
+      <div class="container-fluid">
+        
+        <header class="section-header">
+          <h3>Why choose us?</h3>
+          <p>Changer를 통해 부족한 영양소를 확인하고, 케어하여 영양을 건강하게 change할 수 있습니다.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="why-us-img">
+              <img src="static/img/why-us.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="why-us-content">
+              <p>현대인의 영양 불균형 문제의 여러 원인으로, 다이어트를 위한 칼로리 위주의 관리 혹은 금식, 바쁜 생활에 따른 간편식 등으로 인한 편향된 영양 섭취, 관련 서비스의 부재가 꼽힙니다. 그러나 가장 중요한 원인은 관련 서비스가 부재하여 사람들이 영양 관리에 대한 수요가 있음에도 불구하고, 그들의 불균형한 영양 섭취 현황을 개선하지 못하고 있다는 점입니다. 따라서 본 프로젝트는 ‘현대인의 균형 잡힌 영양 섭취를 위한 어플리케이션, 삼시세끼’을 개발하고자 합니다.</p>
+              <p>
+                본 프로젝트를 통해 개발될 어플리케이션은 단순히 영양 기록을 통한 관리를 넘어, 추천 음식 리스트를 도출하여 올바른 음식을 섭취할 수 있도록 독려합니다.
+
+              </p>
+
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-diamond" style="color: #f058dc;"></i>
+                <h4>영양 섭취 통계 (일별/월별)</h4>
+                <p>부족 영양성분과 해당 성분의 부족 비율을 시각적으로 표기합니다.</p>
+              </div>
+
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-object-group" style="color: #ffb774;"></i>
+                <h4>식단 추천</h4>
+                <p>사용자의 기존 식단 영양 섭취량을 바탕으로 식단을 추천하여 영양성분을 보충하면서도, 사용자가 선호하는 음식 추천합니다.</p>
+              </div>
+              
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-language" style="color: #589af1;"></i>
+                <h4>레시피 추천</h4>
+                <p>추천된 음식 리스트들 중 레시피 정보가 있을 경우, 레시피 정보 제공합니다.</p>
+              </div>
+              
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">표준화 거리 추천 알고리즘</h3>
+            <p class="cta-text">입력받은 사용자의 식단을 고려하여 "표준화 거리 추천 알고리즘"을 사용합니다. 해당 알고리즘의 리턴 값은 사용자에게 최적화된 식단입니다. 추천 원리에 대해 학습하고 싶다면 오른쪽 [상세보기]를 클릭해주세요.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">상세보기</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="team" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h3>Team</h3>
+          <p>[ICT융합캡스톤디자인] "밥은 먹고 다니냐" 팀을 소개합니다.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="static/img/team-4.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>TEAM</h4>
+                  <span>e-business학과 도진우 / 고한솔 / 김도희</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="member">
+              <img src="static/img/team-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>도진우</h4>
+                  <span>Back-end developer</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="static/img/team-3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>고한솔</h4>
+                  <span>Front-end developer</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="static/img/team-2.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>김도희</h4>
+                  <span>Product Manager</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      Frequently Asked Questions Section
+    ============================-->
+    <section id="faq">
+      <div class="container">
+        <header class="section-header">
+          <h3>Q&A</h3>
+          <p>질문 목록입니다.</p>
+        </header>
+
+        <ul id="faq-list" class="wow fadeInUp">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">[식단 통계]에서 색깔 별 구분은 어떤 것을 기준으로 나누어지는건가요? <i class="ion-android-remove"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+                월별 달력에 신호등 색(초록, 노랑, 빨강)으로 표기하였습니다. 먼저, 초록은 모든 영양성분 섭취 권장량의 80% 이상 섭취하였을 때 입니다. 다음으로, 노랑은 일부 영양성분 섭취 권장량의 약 40~70% 섭취하였을 때 입니다. 마지막으로 빨강은 일부 영양성분 섭취 권장량의 약 ~40% 섭취하였을 때 입니다.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">[식단 입력]에서 사진 스캔이 영양성분표를 정확히 인식하지 못하면 어떻게 대처하나요? <i class="ion-android-remove"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                OCR의 정확도가 떨어져서 사진의 텍스트를 정확하게 인식하지 못한다면, 사용자가 잘못 인식된 부분만 수정할 수 있습니다.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">[식단 추천]을 할 때, 참고하는 Open Data가 무엇인가요?<i class="ion-android-remove"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                식품 영양 Database를 참조하여 각 식단 별 영양소를 확인합니다. 참조하는 식품 영양 DB의 컬럼은 100개가 넘고, 이 중에서 저희가 분석하고자 하는 단백질, 탄수화물, 지방, 탄수화물 등의 요소만 추출하여 사용합니다.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq5" class="collapsed">관리자에게 Feedback을 하고 싶으면 어떻게 하나요? <i class="ion-android-remove"></i></a>
+            <div id="faq5" class="collapse" data-parent="#faq-list">
+              <p>
+                [Contact Us] 기능을 활용하여 저희 팀에게 Feedback을 보낼 수 있습니다.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- #faq -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+
+                <div class="col-sm-6">
+
+                  <div class="footer-info">
+                    <h3>Changer</h3>
+                    <p>아주대학교 e-business학과생들로 구성된 팀입니다. [ICT융합캡스톤디자인] 수업을 통해 해당 팀을 구성하였고, 저희 앱 Changer를 통해 자신의 영양을 보충하여 건강하게 changer할 수 있습니다.</p>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#services">Services</a></li>
+                      <li><a href="#team">Team</a></li>
+                      <li><a href="#faq">Q&A</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <p>
+                      Ajou University <br>
+                      <strong>Phone:</strong> 010-4930-0322<br>
+                      <strong>Email:</strong> dnjsvkdls@ajou.ac.kr<br>
+                    </p>
+                  </div>
+
+                  <div class="social-links">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                  </div>
+
+                </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="form">
+              
+              <h4>Send us a message</h4>
+              <p>문의하고 싶은 내용 및 피드백을 아래 메시지를 통해 상세하게 적어주시면, 빠른 시일 내에 답변드리겠습니다.</p>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Changer</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="static/lib/jquery/jquery.min.js"></script>
+  <script src="static/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/lib/easing/easing.min.js"></script>
+  <script src="static/lib/mobile-nav/mobile-nav.js"></script>
+  <script src="static/lib/wow/wow.min.js"></script>
+  <script src="static/lib/waypoints/waypoints.min.js"></script>
+  <script src="static/lib/counterup/counterup.min.js"></script>
+  <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="static/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="static/lib/lightbox/js/lightbox.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="static/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+</html>
