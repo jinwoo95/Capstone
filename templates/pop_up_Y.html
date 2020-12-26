@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>ColumnChart1</title>
+            <style>
+            </style>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://www.gstatic.com/charts/loader.js"></script>
+            <script>
+            //구글 시각화 API를 로딩하는 메소드
+            google.charts.load('current', {packages: ['corechart']});
+            
+            function post_to_url(path, params, method) {
+    method = method || "post"; // Set method to post by default, if not specified.
+    // The rest of this code assumes you are not using a library.
+    // It can be made less wordy if you use one.
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+    for(var key in params) {
+        var hiddenField = document.createElement("input");
+        hiddenField.setAttribute("type", "hidden");
+        hiddenField.setAttribute("name", key);
+        hiddenField.setAttribute("value", params[key]);
+        form.appendChild(hiddenField);
+    }
+    document.body.appendChild(form);
+    form.submit();
+}
+
+            // 묶은 세로 막대형 차트 1
+            function columnChart1() {
+
+                // 버튼 클릭 시 ajax를 사용하여 서버로부터 json 배열 객체를 가져왔다고 가정함
+                var arr = [
+                    ['영양성분', '권장 섭취량', '사용자 섭취량'],
+                    ['Kcal', 1200, 500],
+                    ['Protein', 1180, 410],
+                ];
+
+                // // 진우야 위의 부분 동적으로 코딩하면됨.
+                // // 예를 들면
+                // var arr = [
+                //     ['영양성분', '권장 섭취량', '사용자 섭취량'],
+                //     ['Kcal', {{stand_kal}}, {{kal}}],
+                //     ['Protein', {{stand_pro}}, {{pro}}],
+                // ];
+
+                // 실 데이터를 가진 데이터테이블 객체를 반환하는 메소드
+                var dataTable = google.visualization.arrayToDataTable(arr);
+
+                // 옵션객체 준비
+                var options = {
+                    title: '영양성분별 일일 섭취량 현황',
+                    hAxis: {
+                        title: '영양성분',
+                        titleTextStyle: {
+                            color: 'red'
+                        }
+                    }
+                };
+
+            // 차트를 그릴 영역인 div 객체를 가져옴
+            var objDiv = document.getElementById('column_chart_div1');
+
+            // 인자로 전달한 div 객체의 영역에 컬럼차트를 그릴수 있는 차트객체를 반환
+            var chart = new google.visualization.ColumnChart(objDiv);
+
+            // 차트객체에 데이터테이블과 옵션 객체를 인자로 전달하여 차트 그리는 메소드
+            chart.draw(dataTable, options);
+
+            } // drawColumnChart1()의 끝
+
+
+            // 버튼 동작
+            $(document).ready(function(){
+                $('button').on('click', function(){
+                    columnChart1();
+                });
+            });
+            </script>
+        </head>
+        <body>
+            <button type="button" id="btn">결과보기</button>
+            <div id="column_chart_div1" style="width: 900px; height: 500px;"></div>
+        
+        </body>
+    </html>
+
+    

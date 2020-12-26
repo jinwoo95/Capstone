@@ -1,6 +1,5 @@
 
 <!DOCTYPE html>
-<!-- saved from url=(0150)file:///C:/Users/SamSung/Documents/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1%20%EB%B0%9B%EC%9D%80%20%ED%8C%8C%EC%9D%BC/INDEX_~1/index_Foodstatistic_v2.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -182,7 +181,7 @@
                           <span>토</span>
                         </div>
                       </div>`
-
+                      
           for (let i = 0; i < 6; i++) {
             for (let j = 0; j < 7; j++) {
               if (i == 0 && j < firstDayName) {
@@ -206,36 +205,86 @@
                   calHtml +=
                     `<div class='calendar__day__yellow horizontalGutter'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
                 } 
-                // 12월 5일 테스트
-                else if (j == 6) 
-                   if ('{{nutrition[23]}}'  == 'N') {
-                       calHtml +=
-                     `<button class='calendar__day` + `__red'` + `onclick="window.open(&#39;pop_up.html&#39;, &#39;pop01&#39;, &#39;top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no&#39;);"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
-                   }
-                   else if ('{{nutrition[23]}}' == 'Y'){
-                     calHtml +=
-                     `<button class='calendar__day` + `__green'` + `onclick="window.open(&#39;pop_up.html&#39;, &#39;pop01&#39;, &#39;top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no&#39;);"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
-                   }
-                   else{
-                     calHtml +=
-                     `<button class='calendar__day` + `` + `onclick="window.open(&#39;pop_up.html&#39;, &#39;pop01&#39;, &#39;top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no&#39;);"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+
+               // 12월 1일 테스트
+               else if (j == 2) {
+                  if ('{{nutrition[1]}}' == 'N'){
+                    calHtml +=
+                    `<button class='calendar__day` + `__red'` + `onclick="location.href='/popupN'" name="delete"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
                   }
-                // 12월 3일 테스트
-                else if (j == 4) {
-                   if ('{{nutrition[2]}}' == 'N'){
-                     calHtml +=
-                     `<button class='calendar__day` + `__red'` + `onclick="window.open(&#39;pop_up.html&#39;, &#39;pop01&#39;, &#39;top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no&#39;);"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
-                   }
-                   else if ('{{nutrition[2]}}' == 'Y'){
-                     calHtml +=
-                     `<button class='calendar__day` + `__green'` + `onclick="window.open(&#39;pop_up.html&#39;, &#39;pop01&#39;, &#39;top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no&#39;);"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
-                   }
-                   else{
-                     calHtml +=
-                     `<button class='calendar__day` + `` + `onclick="window.open(&#39;pop_up.html&#39;, &#39;pop01&#39;, &#39;top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no&#39;);"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+                  else if ('{{nutrition[1]}}' == 'Y'){
+                    calHtml +=
+                    `<button class='calendar__day` + `__green'` + `onclick="location.href='/popupY'" name="delete"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+                  }
+                  else{
+                    calHtml +=
+                    `<div class='calendar__day'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
+                  } 
+                }
+
+                // 12월 2일 테스트  
+                else if (j == 3) {
+                  if ('{{nutrition[1]}}' == 'N'){
+                    calHtml +=
+                    `<button class='calendar__day` + `__red'` + `onclick="location.href='/popupN'"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+                  }
+                  else if ('{{nutrition[1]}}' == 'Y'){
+                    calHtml +=
+                    `<button class='calendar__day` + `__green'` + `onclick="location.href='/popupY'"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+                  }
+                  else{
+                    calHtml +=
+                    `<div class='calendar__day'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
                   }
                 }
 
+                // 12월 3일 테스트
+                else if (j == 4) {
+                  if ('{{nutrition[2]}}' == 'N'){
+                    calHtml +=
+                    `<button class='calendar__day` + `__red'` + `onclick="location.href='/popupN'"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+                  }
+                  else if ('{{nutrition[2]}}' == 'Y'){
+                    calHtml +=
+                    `<button class='calendar__day` + `__green'` + `onclick="location.href='/popupY'"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+                  }
+                  else{
+                    calHtml +=
+                    `<div class='calendar__day'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
+                  }
+                }
+
+                // 12월 4일 테스트
+                else if (j == 5) {
+                  if ('{{nutrition[24]}}' == 'N'){
+                    calHtml +=
+                    `<button class='calendar__day` + `__red'` + `onclick="location.href='/popupN'"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+                  }
+                  else if ('{{nutrition[24]}}' == 'Y'){
+                    calHtml +=
+                    `<button class='calendar__day` + `__green'` + `onclick="location.href='/popupY'"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+                  }
+                  else{
+                    calHtml +=
+                    `<div class='calendar__day'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
+                  }
+                }
+
+                // 12월 5일 테스트
+                else if (j == 6) {
+                  if ('{{nutrition[25]}}'  == 'N') {
+                      calHtml +=
+                      `<button class='calendar__day` + `__red'` + `onclick="location.href='/popupN'"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+                  }
+                  else if ('{{nutrition[25]}}' == 'Y'){
+                    calHtml +=
+                    `<button class='calendar__day` + `__green'` + `onclick="location.href='/popupY'"><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></button>`;
+                  }
+                  else{
+                    calHtml +=
+                    `<div class='calendar__day'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
+                  }
+                }
                 else {
                   // 스타일링을 위한 클래스 추가
                   calHtml +=

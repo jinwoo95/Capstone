@@ -343,15 +343,31 @@ def statistic():
                     pro = sum(pro)
                     stand_kal = userNutrition(session['email'])['에너지']
                     stand_pro = userNutrition(session['email'])['단백질']
+                    stand = {'stand_kal' : stand_kal, 'stand_pro' : stand_pro}
+                    user = {'user_kal' : kal , 'user_pro' : pro}
                     if(kal >= stand_kal or pro >=  stand_pro) :
                         nutrition.append('N')
                     else :
                         nutrition.append('Y')
-            return render_template('index_Foodstatistic_v2.html',nutrition = nutrition)
+            return render_template('index_Foodstatistic_v2.html',nutrition = nutrition, stand = stand, user = user)
         else :
             return render_template('index_Foodstatistic_v2.html')
 
+##식단 팝업 api
+@app.route('/popupN',methods = ['GET','POST'])
+def popupN():
+    if(session['logged_in'] == False):
+        return "<script type='text/javascript'>alert('로그인이 필요한 서비스입니다.');location.href = '/main';</script>"
+    else :
+        return render_template('pop_up_N.html')
 
+##식단 팝업 api
+@app.route('/popupY',methods = ['GET','POST'])
+def popupY():
+    if(session['logged_in'] == False):
+        return "<script type='text/javascript'>alert('로그인이 필요한 서비스입니다.');location.href = '/main';</script>"
+    else :
+        return render_template('pop_up_Y.html')
 
 ##----------------------------------------------일반 함수-------------------------------
 def food_processing(result):
@@ -571,16 +587,6 @@ def stdFoodRecommend(userInfo,n_dat = n_dat, dat = dat):
 
     return dat['식품명'].iloc[min_std_dist_idx, ]
 
-def foodRecommend11():
-    if(request.method == 'GET'):
-       return render_template('index_FoodSearch.html')
-    else :
-        keyword = request.form.get('food')
-        keyword = keyword['food']
-        result = searchdb(keyword)
-        result = food_processing(result)
-        result = jsonify(result)
-        return result
 #영양성분 도출
 def Calculate_FoodRecommendedQuantity(food_recommend_quantity, height, weight, age, sex, isPregnant, activity):  
     male_index = food_recommend_quantity[food_recommend_quantity['성별 '] == '남자'].index
