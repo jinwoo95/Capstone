@@ -1,3 +1,6 @@
+# -\*- coding: utf-8 -\*-
+
+
 from flask import Flask, request, jsonify, session, redirect, render_template, url_for, session
 #from flask_wtf.csrf import CSRFProtect
 #from forms import RegisterForm, LoginForm
@@ -24,10 +27,12 @@ food_recommend_quantity = food_recommend_quantity.fillna(0)
 
 # "음식"을 대상으로 추출
 dat_cond = (dat.DB군 == "음식")
+
 dat = dat.loc[dat_cond, ]
 
 # reindex
 dat = dat.reset_index()
+
 
 # 필요한 열만 추출
 n_columns = ['NO',
@@ -228,7 +233,9 @@ def foodresearch():
             return render_template('foodresearch.html')
         else :
             food = request.form.get('food')
+            
             food_info = food_searchdb(food)
+            
             favorites_check = request.form.get('favorites_check')
             if (food_info is None) :
                 return "<script type='text/javascript'>  ; alert('"+food+"란 음식이 없습니다.');history.back();</script>"
@@ -622,4 +629,4 @@ def Calculate_FoodRecommendedQuantity(food_recommend_quantity, height, weight, a
                 
     return target_nutrient
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
