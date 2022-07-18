@@ -630,3 +630,4 @@ def Calculate_FoodRecommendedQuantity(food_recommend_quantity, height, weight, a
     return target_nutrient
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
+    
